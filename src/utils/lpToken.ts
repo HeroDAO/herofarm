@@ -21,8 +21,12 @@ export async function lpTokenValue(lpContract: Contract): Promise<BigNumber> {
     variables: { pair: lpContract.options.address.toLowerCase() },
   })
   console.log('liquidityData', liquidityData)
-  const pairLiquidityValue = new BigNumber(liquidityData.pair.reserveETH)
-
-  // Calculate the USD value of each LP token
-  return pairLiquidityValue.div(lpTotalSupply)
+  let pairLiquidityValue = new BigNumber(0)
+  if (liquidityData.pair) {
+    pairLiquidityValue = new BigNumber(liquidityData.pair.reserveETH)
+    // Calculate the USD value of each LP token
+    return pairLiquidityValue.div(lpTotalSupply)
+  } else {
+    return pairLiquidityValue
+  }
 }
