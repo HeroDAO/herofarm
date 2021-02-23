@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import BigNumber from 'bignumber.js/bignumber'
 //import roseFlower from '../../assets/img/rose_flower.svg'
 import agave from '../../assets/img/agave.svg'
@@ -47,13 +47,17 @@ export const INTEGERS = {
 export const contractAddresses = {
   sushi: {
     100: '0x71850b7E9Ee3f13Ab46d67167341E4bDc905Eef9',
+    // 42: '0x4505b262DC053998C10685DC5F9098af8AE5C8ad',
+    42: '0xAb5cC910998Ab6285B4618562F1e17f3728af662',
   },
   weth: {
     100: '0xe91d153e0b41518a2ce8dd3d7944fa863463a97d',
+    42: '0xd0a1e359811322d97991e03f863a0c30c2cf029c',
   },
   factory: {
-    100: '0xE29DCD715D11455194D7d74c622F3c42C8a37040'
-  }
+    100: '0xE29DCD715D11455194D7d74c622F3c42C8a37040',
+    42: '0x1c06d4B3c6B3699dB45986C15d12200b067D4339',
+  },
 }
 
 /*
@@ -62,16 +66,16 @@ export const contractAddresses = {
  * HNY/WXDAI  0x4505b262dc053998c10685dc5f9098af8ae5c8ad
  * HNY/STAKE  0x298c7326a6e4a6108b88520f285c7dc89403347d
  * HNY/WETH   0x89e2f342b411032a580fefa17f96da6a5bef4112
-*/
+ */
 
 export const knownPools = {
   '0x8520fc4c282342f8e746b881b9b60c14f96a0fab': {
     name: 'Dai Daisies',
-    icon: <img src={creamFlower} alt="" />
+    icon: <img src={creamFlower} alt="" />,
   },
   '0xa6c55971f21cc1c35ea617f47980d669a0c09cf3': {
     name: 'STAKE Sunflower',
-    icon: <img src={yellowSunflower} alt="" />
+    icon: <img src={yellowSunflower} alt="" />,
   },
   '0x0de3239086dbf7edf17805107cae89b0c1a2db37': {
     name: 'Ether Eucalyptus',
@@ -79,11 +83,11 @@ export const knownPools = {
   },
   '0x704876d066cded601f668ee2da0519da465cbf93': {
     name: 'Bitcoin Birch',
-    icon: <img src={birch} alt="" />
+    icon: <img src={birch} alt="" />,
   },
   '0xadcd8e1699158627f072b080528f0ea6d020e46a': {
     name: 'Wrapped Willow',
-    icon: <img src={blueGreenTree} alt="" />
+    icon: <img src={blueGreenTree} alt="" />,
   },
   '0x90d029ddbf3fb4662eceefb7f31d052f4e07856e': {
     name: 'Link Linum',
@@ -144,5 +148,5 @@ export const knownPools = {
   '0x3f283c53c1679d69916d70d79cd3fe6ab7c3e180': {
     name: 'renZEC Redwood',
     icon: <img src={giantRedwood} alt="" />,
-  }
+  },
 }

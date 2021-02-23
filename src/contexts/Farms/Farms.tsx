@@ -27,13 +27,13 @@ const Farms: React.FC = ({ children }) => {
   useEffect(() => {
     async function fetchFarms () {
       await Promise.all(data.pools.map(async (pool: any) => {
-        const token0Exists = tokenAddresses.includes(pool.pair.token0.id)
-        const token1Exists = tokenAddresses.includes(pool.pair.token1.id)
+        const token0Exists = tokenAddresses.includes(pool.pair.token0?.id)
+        const token1Exists = tokenAddresses.includes(pool.pair.token1?.id)
         await sushi.contracts.addPool({
           poolAddress: pool.id,
           lpAddress: pool.pair.id,
-          token0Symbol: pool.pair.token0.symbol,
-          token1Symbol: pool.pair.token1.symbol,
+          token0Symbol: pool.pair.token0?.symbol,
+          token1Symbol: pool.pair.token1?.symbol,
           earnTokenAddress: pool.rewardToken.id,
           earnToken: pool.rewardToken.symbol,
           rewards: new BigNumber(pool.rewards),

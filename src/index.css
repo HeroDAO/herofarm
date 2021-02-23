@@ -1,5 +1,7 @@
 body {
-  background: linear-gradient(107deg, #CBF3EF 0%, #FAFAE2 49.48%, #FFC3AB 100%);
+  /* background: linear-gradient(107deg, #cbf3ef 0%, #fafae2 49.48%, #ffc3ab 100%); */
+  /* background: #03061b; */
+  background: white;
   margin: 0;
   font-family: 'Overpass', sans-serif;
   font-size: 16px;

@@ -115,9 +115,9 @@ const FarmCards: React.FC = () => {
   const ACTIVE_THRESHOLD = new BigNumber(0.5)
   
   // Use this when there's active farms
-  // const activeFarms = farmsWithApy
-  //   .filter((farm) => farm.rewards.gt(ACTIVE_THRESHOLD))
-  //   .filter((farm) => curatedActiveFarms.includes(farm.poolAddress))
+  const activeFarms = farmsWithApy
+    .filter((farm) => farm.rewards.gt(ACTIVE_THRESHOLD))
+    .filter((farm) => curatedActiveFarms.includes(farm.poolAddress))
 
   // Hotfix until we fix APY calculation
   const endedRewardsFarms = farmsWithApy
@@ -127,12 +127,14 @@ const FarmCards: React.FC = () => {
   const inactiveFarms = farmsWithApy
     .filter((farm) => farm.rewards.lt(ACTIVE_THRESHOLD))
 
+    console.log('inactiveFarms', inactiveFarms)
+
   return (
     <>
-      <FarmSectionHeader>There are no active farms</FarmSectionHeader>
-      <FarmSectionDescription>🍯 Currently, there are no farms that give rewards. 🍯</FarmSectionDescription>
-      {/* <FarmSectionDescription>Farms that currently give rewards.</FarmSectionDescription> */}
-      {/* <StyledCards>
+      {/* <FarmSectionHeader>There are no active farms</FarmSectionHeader>
+      <FarmSectionDescription>🍯 Currently, there are no farms that give rewards. 🍯</FarmSectionDescription> */}
+      <FarmSectionDescription>Farms that currently give rewards.</FarmSectionDescription>
+      <StyledCards>
         {!!activeFarms.length ? (
           activeFarms.map((farm, i) => (
             <FarmCard farm={farm} key={i} />
@@ -142,7 +144,7 @@ const FarmCards: React.FC = () => {
             <Loader text="Loading..." />
           </StyledLoadingWrapper>
         )}
-      </StyledCards> */}
+      </StyledCards>
       <Spacer size='md' />
       <FarmSectionHeader>Inactive farms</FarmSectionHeader>
       <FarmSectionDescription>
@@ -167,7 +169,9 @@ interface FarmCardProps {
   farm: FarmWithApy
 }
 
+
 const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
+
   return (
     <StyledCardWrapper>
       <Card>

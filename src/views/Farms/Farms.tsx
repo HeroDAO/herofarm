@@ -33,9 +33,9 @@ const Farms: React.FC = () => {
               />
               <FarmCards />
             </Route>
-            <Route path={`${path}/create`}>
+            {/* <Route path={`${path}/create`}>
               <CreateFarm />
-            </Route>
+            </Route> */}
             <Route path={`${path}/:farmId`}>
               <Farm />
             </Route>

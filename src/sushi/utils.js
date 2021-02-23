@@ -37,7 +37,7 @@ export const getFarms = (sushi) => {
           rewards,
           rewardRate,
           staked,
-          verified
+          verified,
         }) => ({
           id: symbol,
           name,
@@ -52,7 +52,7 @@ export const getFarms = (sushi) => {
           rewards,
           rewardRate,
           staked,
-          verified
+          verified,
         }),
       )
     : []
@@ -69,14 +69,13 @@ export const approve = async (lpContract, contract, account) => {
 }
 
 export const getSushiSupply = async (sushi) => {
+  console.log('sushi', sushi)
   return new BigNumber(await sushi.contracts.sushi.methods.totalSupply().call())
 }
 
 export const stake = async (poolContract, amount, account) => {
   return poolContract.methods
-    .stake(
-      new BigNumber(amount).times(BigNumber(10).pow(18)).toString()
-    )
+    .stake(new BigNumber(amount).times(BigNumber(10).pow(18)).toString())
     .send({ from: account })
     .on('transactionHash', (tx) => {
       console.log(tx)
@@ -86,9 +85,7 @@ export const stake = async (poolContract, amount, account) => {
 
 export const unstake = async (poolContract, amount, account) => {
   return poolContract.methods
-    .withdraw(
-      new BigNumber(amount).times(new BigNumber(10).pow(18)).toString()
-    )
+    .withdraw(new BigNumber(amount).times(new BigNumber(10).pow(18)).toString())
     .send({ from: account })
     .on('transactionHash', (tx) => {
       console.log(tx)
