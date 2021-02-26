@@ -1,11 +1,16 @@
+/* For data and numbers */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap%27');
+
+/* For everything else */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap%27');
+
 body {
   /* background: linear-gradient(107deg, #cbf3ef 0%, #fafae2 49.48%, #ffc3ab 100%); */
   background: #03061b;
-  background: white;
   margin: 0;
-  font-family: 'Overpass', sans-serif;
+  font-family: 'mullish', sans-serif;
   font-size: 16px;
-  color: 'white';
+  color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,4 +22,10 @@ code {
 
 img {
   image-rendering: -webkit-optimize-contrast;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitals {
+  text-transform: capitalize;
 }
