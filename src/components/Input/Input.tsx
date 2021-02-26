@@ -29,7 +29,7 @@ const Input: React.FC<InputProps> = ({
 const StyledInputWrapper = styled.div`
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: ${palette['bg']};
   border: 2px solid ${palette['orange']};
   color: white;
   border-radius: 6px;
@@ -42,7 +42,7 @@ const StyledInputWrapper = styled.div`
 const StyledInput = styled.input`
   background: none;
   border: 0;
-  color: #2C3437;
+  color: #ffffff;
   font-size: 18px;
   flex: 1;
   height: 48px;

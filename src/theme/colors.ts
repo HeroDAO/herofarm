@@ -28,5 +28,6 @@ export const palette = {
   orange: '#EB8A23',
   // secondaryAlpha: rgba('#10153d', 0.75),
   bg: '#03061B',
+  cardAlpha: "rgba(0,0,0,0.6)",
   bgAlpha: '#03061B',
 }
