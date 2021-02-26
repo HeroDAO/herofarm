@@ -14,7 +14,7 @@ import ModalContent from '../../ModalContent'
 import ModalTitle from '../../ModalTitle'
 import Spacer from '../../Spacer'
 import Value from '../../Value'
-import HoneyIcon from '../../../assets/img/honey.svg'
+import HausIcon from '../../../assets/img/daohaus__icon.png'
 
 const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
   const { account, reset } = useWallet()
@@ -36,11 +36,11 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
         <div style={{ display: 'flex' }}>
           <StyledBalanceWrapper>
             <CardIcon>
-              <img src={HoneyIcon} alt="" height="80" />
+              <img src={HausIcon} alt="" height="80" />
             </CardIcon>
             <StyledBalance>
               <Value value={getBalanceNumber(honeyBalance)} />
-              <Label text="HNY Balance" />
+              <Label text="HAUS Balance" />
             </StyledBalance>
           </StyledBalanceWrapper>
         </div>

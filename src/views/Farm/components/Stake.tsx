@@ -19,7 +19,7 @@ import useUnstake from '../../../hooks/useUnstake'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 import DepositModal from './DepositModal'
 import WithdrawModal from './WithdrawModal'
-import BeeIcon from '../../../assets/img/bee.svg'
+import HausIcon from '../../../assets/img/daohaus__icon.png'
 
 interface StakeProps {
   lpContract: Contract
@@ -73,7 +73,7 @@ const Stake: React.FC<StakeProps> = ({ lpContract, poolContract, tokenName }) =>
       <CardContent>
         <StyledCardContentInner>
           <StyledCardHeader>
-            <CardIcon><img src={BeeIcon} height="56px" alt="" /></CardIcon>
+            <CardIcon><img src={HausIcon} height="56px" alt="" /></CardIcon>
             <Value value={getBalanceNumber(stakedBalance)} decimals={6} />
             <Label text={`${tokenName} Tokens Staked`} />
           </StyledCardHeader>
