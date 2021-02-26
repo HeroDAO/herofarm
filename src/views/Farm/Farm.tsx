@@ -23,7 +23,7 @@ const Farm: React.FC = () => {
     icon,
     lpContract,
     poolContract,
-    verified
+    // verified
   } = useFarm(farmId) || {
     lpToken: '',
     earnToken: '',
@@ -208,16 +208,16 @@ const StyledCardWrapper = styled.div`
   }
 `
 
-const StakeDisclaimer = styled.div`
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 10px;
-  background: ${({ theme }) => theme.color.red[500]};
-  color: #fff;
-  a {
-    font-weight: 500;
-    color: #fff;
-  }
-`
+// const StakeDisclaimer = styled.div`
+//   max-width: 900px;
+//   margin: 0 auto;
+//   padding: 10px;
+//   background: ${({ theme }) => theme.color.red[500]};
+//   color: #fff;
+//   a {
+//     font-weight: 500;
+//     color: #fff;
+//   }
+// `
 
 export default Farm

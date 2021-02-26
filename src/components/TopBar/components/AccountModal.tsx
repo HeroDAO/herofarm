@@ -32,7 +32,6 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
       <ModalTitle text="My Account" />
       <ModalContent>
         <Spacer />
-
         <div style={{ display: 'flex' }}>
           <StyledBalanceWrapper>
             <CardIcon>

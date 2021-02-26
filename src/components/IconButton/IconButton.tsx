@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { palette } from '../../theme/colors'
 
 interface IconButtonProps {
   children?: React.ReactNode
@@ -28,7 +29,7 @@ interface StyledButtonProps {
 
 const StyledButton = styled.button<StyledButtonProps>`
   align-items: center;
-  background: linear-gradient(268.53deg, #aaf5d4 0%, #7ce0d6 100%);
+  background: ${palette['orange']};
   border: 0;
   border-radius: 12px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);

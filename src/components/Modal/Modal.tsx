@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import { palette } from '../../theme/colors'
 
 export interface ModalProps {
   onDismiss?: () => void
@@ -43,8 +44,8 @@ const StyledResponsiveWrapper = styled.div`
 
 const StyledModal = styled.div`
   padding: 0 20px;
-  background: #03061b;
   border: 1px solid rgba(255,255,255,0.15);
+  background: ${palette['cardAlpha']};
   border-radius: 12px;
   display: flex;
   flex-direction: column;

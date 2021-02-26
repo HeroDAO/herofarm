@@ -1,5 +1,6 @@
 import React, { createContext, useCallback, useState } from 'react'
 import styled from 'styled-components'
+import { palette } from '../../theme/colors'
 
 interface ModalsContext {
   content?: React.ReactNode,
@@ -54,10 +55,11 @@ const StyledModalWrapper = styled.div`
   justify-content: center;
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
+  
 `
 
 const StyledModalBackdrop = styled.div`
-  background-color: rgba(0,0,0,0.75);
+  background-color: ${palette['bgAlpha']};
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
 `
