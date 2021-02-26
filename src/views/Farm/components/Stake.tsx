@@ -19,7 +19,7 @@ import useUnstake from '../../../hooks/useUnstake'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 import DepositModal from './DepositModal'
 import WithdrawModal from './WithdrawModal'
-import HausIcon from '../../../assets/img/daohaus__icon.png'
+import HausIcon from '../../../assets/img/haus__icon.png'
 
 interface StakeProps {
   lpContract: Contract

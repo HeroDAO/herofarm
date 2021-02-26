@@ -21,7 +21,7 @@ interface FarmWithApy extends Farm {
 }
 
 const curatedActiveFarms = [
-  // EMPTY
+  //EMPTY
   "no farms are funded atm",
   // HNY-LINK 
   // "0x90d029ddbf3fb4662eceefb7f31d052f4e07856e",
