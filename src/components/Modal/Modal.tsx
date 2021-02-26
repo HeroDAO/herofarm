@@ -44,6 +44,7 @@ const StyledResponsiveWrapper = styled.div`
 
 const StyledModal = styled.div`
   padding: 0 20px;
+  border: 1px solid rgba(255,255,255,0.15);
   background: ${palette['cardAlpha']};
   border-radius: 12px;
   display: flex;

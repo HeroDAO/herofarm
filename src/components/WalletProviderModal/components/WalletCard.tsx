@@ -5,6 +5,7 @@ import CardContent from '../../CardContent'
 import CardIcon from '../../CardIcon'
 import CardTitle from '../../CardTitle'
 import Spacer from '../../Spacer'
+import styled from 'styled-components'
 
 interface WalletCardProps {
   icon: React.ReactNode
@@ -13,14 +14,18 @@ interface WalletCardProps {
 }
 
 const WalletCard: React.FC<WalletCardProps> = ({ icon, onConnect, title }) => (
-  <Card>
+  <StyledCard>
     <CardContent>
       <CardIcon>{icon}</CardIcon>
       <CardTitle text={title} />
       <Spacer />
       <Button onClick={onConnect} text="Connect" />
     </CardContent>
-  </Card>
+  </StyledCard>
 )
+
+const StyledCard = styled(Card) `
+  background: 'white !important';
+`
 
 export default WalletCard
