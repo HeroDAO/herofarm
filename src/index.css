@@ -8,7 +8,7 @@ body {
   /* background: linear-gradient(107deg, #cbf3ef 0%, #fafae2 49.48%, #ffc3ab 100%); */
   background: #03061b;
   margin: 0;
-  font-family: 'mullish', sans-serif;
+  font-family: 'mulish', sans-serif;
   font-size: 16px;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
@@ -16,8 +16,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'space mono', monospace;
 }
 
 img {

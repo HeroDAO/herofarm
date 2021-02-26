@@ -61,7 +61,7 @@ const StyledIcon = styled.div`
   text-align: center;
 `
 const StyledTitle = styled.h1`
-  font-family: 'mullish', sans-serif;
+  font-family: 'mulish', sans-serif;
   color: #ffffff;
   font-size: 36px;
   font-weight: 400;
@@ -71,7 +71,7 @@ const StyledTitle = styled.h1`
 
 const StyledSubtitle = styled.h3`
   color: #ffffff;
-  font-family: 'mullish', sans-serif;
+  font-family: 'mulish', sans-serif;
   font-size: 18px;
   font-weight: 300;
   margin: 0;

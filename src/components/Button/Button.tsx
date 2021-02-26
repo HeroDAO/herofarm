@@ -123,7 +123,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   cursor: pointer;
   display: flex;
   font-size: 1rem;
-  font-family: 'mullish';
+  font-family: 'mulish';
   font-weight: 600;
   height: 2.5rem;
   justify-content: center;
