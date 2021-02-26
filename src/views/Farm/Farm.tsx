@@ -153,7 +153,7 @@ const StyledAddresses = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: #ffffff;
+  color: rgba(255,255,255,0.85);
   font-family: Overpass;
   font-style: normal;
   font-weight: 300;

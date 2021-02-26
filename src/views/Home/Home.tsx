@@ -12,8 +12,8 @@ const Home: React.FC = () => {
     <Page>
       <PageHeader
         icon={<img src={HausType} height={80} alt="farmHaus" />}
-        title="FarmHaus"
-        subtitle=""
+        title=""
+        subtitle="Welcome to our humble FarmHaus"
       />
 
       <Container>
