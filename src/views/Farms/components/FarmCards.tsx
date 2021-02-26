@@ -148,7 +148,7 @@ const FarmCards: React.FC = () => {
       <Spacer size='md' />
       <FarmSectionHeader>Inactive farms</FarmSectionHeader>
       <FarmSectionDescription>
-        These farms are not actively generating rewards.
+        These farms are not actively giving rewards.
       </FarmSectionDescription>
       <StyledCards>
         {!!inactiveFarms.length ? (

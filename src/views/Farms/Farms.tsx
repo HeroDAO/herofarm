@@ -28,8 +28,8 @@ const Farms: React.FC = () => {
             <Route exact path={path}>
               <PageHeader
                 icon={<img src={HausAvatar} height="95" alt="" />}
-                subtitle="Stake HAUS or LP tokens to earn more HAUS."
-                title="Select a farm haus"
+                title="Stake HAUS or LP tokens to earn HAUS."
+                subtitle="Select a haus to farm"
               />
               <FarmCards />
             </Route>
