@@ -20,3 +20,13 @@ export const grey = {
   600: '#5b3926',
   800: '#2d1e12',
 }
+
+
+export const palette = {
+  navy: '#10153d',
+  // primaryAlpha: rgba('#10153d', 0.9),
+  orange: '#EB8A23',
+  // secondaryAlpha: rgba('#10153d', 0.75),
+  bg: '#03061B',
+  bgAlpha: '#03061B',
+}

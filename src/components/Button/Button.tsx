@@ -17,7 +17,7 @@ interface ButtonProps {
   background?: string,
 }
 
-const DEFAULT_COLOR =  '#2C3437'
+const DEFAULT_COLOR =  '#ffffff'
 
 const Button: React.FC<ButtonProps> = ({
   children,
@@ -40,20 +40,20 @@ const Button: React.FC<ButtonProps> = ({
   let fontSize: number
   switch (size) {
     case 'sm':
-      boxShadow = `0px 1px 2px rgba(0, 0, 0, 0.08)`
+      // boxShadow = `0px 1px 2px rgba(0, 0, 0, 0.08)`
       buttonPadding = spacing[4]
       buttonSize = 36
       fontSize = 14
       break
     case 'lg':
-      boxShadow = `0px 1px 2px rgba(0, 0, 0, 0.08)`
+      // boxShadow = `0px 1px 2px rgba(0, 0, 0, 0.08)`
       buttonPadding = spacing[4]
       buttonSize = 72
       fontSize = 16
       break
     case 'md':
     default:
-      boxShadow = `0px 1px 2px rgba(0, 0, 0, 0.08)`
+      // boxShadow = `0px 1px 2px rgba(0, 0, 0, 0.08)`
       buttonPadding = spacing[4]
       buttonSize = 40
       fontSize = 14
@@ -65,10 +65,10 @@ const Button: React.FC<ButtonProps> = ({
   } else {
     switch (variant) {
       case 'secondary':
-        background = '#ffffff'
+        background = 'transparent'
         break
       default:
-        background = 'linear-gradient(268.53deg, #aaf5d4 0%, #7ce0d6 100%)'
+        background = 'rgb(235, 138, 35)'
     }
   }
 
