@@ -7,11 +7,10 @@
 body {
   /* background: linear-gradient(107deg, #cbf3ef 0%, #fafae2 49.48%, #ffc3ab 100%); */
   background: #03061b;
-  background: white;
   margin: 0;
-  font-family: 'Overpass', sans-serif;
+  font-family: 'mullish', sans-serif;
   font-size: 16px;
-  color: 'white';
+  color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -14,6 +14,7 @@ import useTokenBalance from '../../../hooks/useTokenBalance'
 import useHoney from '../../../hooks/useSushi'
 import { getSushiAddress, getSushiSupply } from '../../../sushi/utils'
 import { getBalanceNumber } from '../../../utils/formatBalance'
+import { palette } from '../../../theme/colors'
 
 const PendingRewards: React.FC = () => {
   const [start, setStart] = useState(0)
@@ -130,8 +131,8 @@ const StyledRow = styled.div`
 const Footnote = styled.div`
   font-size: 14px;
   padding: 8px 20px;
-  color: #818181;
-  border-top: solid 1px #EFEFEF;
+  color: #ffffff;
+  border-top: solid 1px ${palette['orange']};
 `
 const FootnoteValue = styled.div`
   font-family: 'Overpass', sans-serif;
@@ -146,6 +147,7 @@ const StyledWrapper = styled.div`
     flex-flow: column nowrap;
     align-items: stretch;
   }
+  color: '#ffffff'
 `
 
 const StyledBalances = styled.div`

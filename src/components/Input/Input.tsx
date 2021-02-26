@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { palette } from '../../theme/colors'
 
 export interface InputProps {
   endAdornment?: React.ReactNode,
@@ -29,11 +30,12 @@ const StyledInputWrapper = styled.div`
   display: flex;
   align-items: center;
   background: #ffffff;
-  border: 1px solid rgb(224 224 224);
-  color: rgb(44, 52, 55);
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 400;
+  border: 2px solid ${palette['orange']};
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 500;
   padding: 0px 0px 0px 20px;
 `
 

@@ -26,7 +26,7 @@ const StyledLogo = styled(Link)`
 `
 
 const StyledText = styled.span`
-  color: #white;
+  color: white;
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   font-weight: 400;

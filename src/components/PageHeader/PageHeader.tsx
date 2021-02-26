@@ -14,9 +14,9 @@ const PageHeader: React.FC<PageHeaderProps> = ({ icon, subtitle, title, circle }
   return (
     <Container size="sm">
       <StyledPageHeader>
-        {circle && <CircleIconWrapper>
+        {/* {circle && <CircleIconWrapper>
           <CircleIcon>{icon}</CircleIcon>
-        </CircleIconWrapper>}
+        </CircleIconWrapper>} */}
         {!circle && <StyledIcon>{icon}</StyledIcon>}
         <StyledTitle>{title}</StyledTitle>
         <StyledSubtitle>{subtitle}</StyledSubtitle>
@@ -61,8 +61,8 @@ const StyledIcon = styled.div`
   text-align: center;
 `
 const StyledTitle = styled.h1`
-  font-family: 'Overpass', sans-serif;
-  color: #2C3437;
+  font-family: 'mullish', sans-serif;
+  color: #ffffff;
   font-size: 36px;
   font-weight: 400;
   margin: 0;
@@ -70,8 +70,8 @@ const StyledTitle = styled.h1`
 `
 
 const StyledSubtitle = styled.h3`
-  color: #2C3437;
-  font-family: 'Overpass', sans-serif;
+  color: #ffffff;
+  font-family: 'mullish', sans-serif;
   font-size: 18px;
   font-weight: 300;
   margin: 0;

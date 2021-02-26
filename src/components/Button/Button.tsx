@@ -15,6 +15,7 @@ interface ButtonProps {
   to?: string,
   variant?: 'default' | 'secondary' | 'tertiary'
   background?: string,
+  className?: string
 }
 
 const DEFAULT_COLOR =  '#ffffff'
@@ -30,6 +31,7 @@ const Button: React.FC<ButtonProps> = ({
   text,
   to,
   variant,
+  className
 }) => {
   const { spacing } = useContext(ThemeContext)
 
@@ -55,13 +57,13 @@ const Button: React.FC<ButtonProps> = ({
     default:
       // boxShadow = `0px 1px 2px rgba(0, 0, 0, 0.08)`
       buttonPadding = spacing[4]
-      buttonSize = 40
+      buttonSize = 42
       fontSize = 14
   }
 
   let background
   if (disabled) {
-    background = '#E9E9E9'
+    background = 'rgb(235, 138, 35, 0.9)'
   } else {
     switch (variant) {
       case 'secondary':
@@ -93,6 +95,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       padding={buttonPadding}
       size={buttonSize}
+      className={className}
     >
       {children}
       {ButtonChild}
@@ -112,26 +115,35 @@ interface StyledButtonProps {
 }
 
 const StyledButton = styled.button<StyledButtonProps>`
-  background: ${props => props.background || ""};
-  color: ${props => props.color};
+  background: rgb(235, 138, 35);
+  color: white;
   align-items: center;
   border: 0;
-  border-radius: 12px;
+  border-radius: 6px;
   cursor: pointer;
   display: flex;
-  font-size: ${props => props.fontSize}px;
-  font-weight: 500;
-  height: ${props => props.size}px;
+  font-size: 1rem;
+  font-family: 'mullish';
+  font-weight: 600;
+  height: 2.5rem;
   justify-content: center;
   outline: none;
-  padding-left: ${props => props.padding}px;
-  padding-right: ${props => props.padding}px;
-  pointer-events: ${props => !props.disabled ? undefined : 'none'};
+  padding-left: 1rem;
+  padding-right: 1rem;
+  pointer-events: 'none';
   width: 100%;
-  &:hover {
-    background-color: ${props => props.hoverColor};
+  transition: 0.2s all;
+  :hover {
+    background-color: rgba(235, 138, 35, 0.9);
   }
-  box-shadow: ${props => props.boxShadow};
+  :active {
+    background-color: transparent;
+  }
+  &.outline {
+    background: transparent;
+    color: rgb(235, 138, 35);
+    border: 1px solid rgb(237, 150, 58);
+  }
 `
 
 const StyledLink = styled(Link)`
