@@ -11,7 +11,7 @@ const Home: React.FC = () => {
   return (
     <Page>
       <PageHeader
-        icon={<img src={HausType} height={80} alt="bee" />}
+        icon={<img src={HausType} height={80} alt="farmHaus" />}
         title="FarmHaus"
         subtitle=""
       />

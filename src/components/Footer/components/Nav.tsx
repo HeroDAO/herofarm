@@ -42,7 +42,10 @@ const Link = styled(AragonLink)`
   margin-bottom: ${1.5 * GU}px;
   text-align: left;
   text-decoration: none;
-  color: #808587;
+  color: #c7c7c7;
+  :active {
+    color: #ffffff;
+  }
 `
 
 const StyledHeader = styled.h5`
