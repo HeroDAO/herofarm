@@ -4,7 +4,7 @@ import { GU } from '@1hive/1hive-ui'
 
 import Container from '../Container'
 import Nav from './components/Nav'
-import logoSvg from '../../assets/img/logo.svg'
+import Logo from '../Logo'
 
 const Footer: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           <StyledFooter>
             <StyledFooterInner>
               <StyledLogo>
-                <img src={logoSvg} height="40" alt="" />
+                <Logo />
               </StyledLogo>
               <Nav />
             </StyledFooterInner>
@@ -31,7 +31,7 @@ const StyleOuterWrap = styled.div`
 const StyleInnerWrap = styled.div`
   align-items: center;
   height: 100%;
-  background: rgba(255, 255, 255, 0.5);
+  background: #050a1b;
 `
 const StyledLogo = styled.div`
   margin-top: 30px;

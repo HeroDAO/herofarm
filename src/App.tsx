@@ -68,7 +68,7 @@ const Providers: React.FC = ({ children }) => {
 }
 
 const StyledBackground = styled.div`
-  background: linear-gradient(111.63deg, #CBF3EF 0%, #FAFAE2' 49.48%, #FFC3AB 100%);
+  background: linear-gradient(111.63deg, #03061b 0%, #0E1235 49.48%, #0E1235 100%);
 `
 
 export default App

@@ -6,12 +6,12 @@
 
 body {
   /* background: linear-gradient(107deg, #cbf3ef 0%, #fafae2 49.48%, #ffc3ab 100%); */
-  /* background: #03061b; */
+  background: #03061b;
   background: white;
   margin: 0;
   font-family: 'Overpass', sans-serif;
   font-size: 16px;
-  color: '#2C3437';
+  color: 'white';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
