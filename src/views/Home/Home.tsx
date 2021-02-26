@@ -1,5 +1,5 @@
 import React from 'react'
-import beeSvg from '../../assets/img/bee.svg'
+import HausType from '../../assets/img/haus__hugeType.png'
 import Button from '../../components/Button'
 import Container from '../../components/Container'
 import Page from '../../components/Page'
@@ -11,8 +11,8 @@ const Home: React.FC = () => {
   return (
     <Page>
       <PageHeader
-        icon={<img src={beeSvg} height={95} alt="bee" />}
-        title="Hausfarm"
+        icon={<img src={HausType} height={80} alt="bee" />}
+        title="FarmHaus"
         subtitle=""
       />
 
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           margin: '0 auto',
         }}
       >
-        <Button text="Back to Honeyswap" href="https://app.honeyswap.org/#/swap" variant="default" />
+        <Button text="Back to DAOhaus" href="https://app.daohaus.club" variant="default" />
       </div>
     </Page>
   )
