@@ -21,7 +21,7 @@ interface FarmWithApy extends Farm {
 }
 
 const curatedActiveFarms = [
-  // EMPTY
+  //EMPTY
   "no farms are funded atm",
   // HNY-LINK 
   // "0x90d029ddbf3fb4662eceefb7f31d052f4e07856e",
@@ -133,7 +133,7 @@ const FarmCards: React.FC = () => {
     <>
       {/* <FarmSectionHeader>There are no active farms</FarmSectionHeader>
       <FarmSectionDescription>🍯 Currently, there are no farms that give rewards. 🍯</FarmSectionDescription> */}
-      <FarmSectionDescription>Farms that currently give rewards.</FarmSectionDescription>
+      <FarmSectionDescription>Farms actively giving rewards.</FarmSectionDescription>
       <StyledCards>
         {!!activeFarms.length ? (
           activeFarms.map((farm, i) => (
@@ -148,7 +148,7 @@ const FarmCards: React.FC = () => {
       <Spacer size='md' />
       <FarmSectionHeader>Inactive farms</FarmSectionHeader>
       <FarmSectionDescription>
-        These are farms that have no rewards. They will only get rewards if a funding proposal for them passes.
+        These farms are not actively generating rewards.
       </FarmSectionDescription>
       <StyledCards>
         {!!inactiveFarms.length ? (
@@ -181,7 +181,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             <StyledTitle>{farm.name}</StyledTitle>
             <StyledDetails>
               <StyledDetail>Deposit {farm.lpToken.toUpperCase()}</StyledDetail>
-              <StyledDetail>Earn {farm.earnToken}</StyledDetail>
+              <StyledDetail>Earn HAUS
+                {/* {farm.earnToken} */}
+                </StyledDetail>
             </StyledDetails>
             <Spacer />
             <Button
@@ -221,7 +223,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
 
 const FarmSectionHeader = styled.h1`
   font-family: 'Overpass', sans-serif;
-  color: #2C3437;
+  color: white;
   font-size: 32px;
   font-weight: 400;
   margin: 0;
@@ -229,7 +231,7 @@ const FarmSectionHeader = styled.h1`
 `
 
 const FarmSectionDescription = styled.p`
-  color: #2C3437;
+  color: white;
 `
 
 const StyledCards = styled.div`
@@ -263,7 +265,7 @@ const StyledCardWrapper = styled.div`
 `
 
 const StyledTitle = styled.h4`
-  color: #2C3437;
+  color: white;
   font-size: 24px;
   font-weight: 700;
   margin: ${(props) => props.theme.spacing[2]}px 0 0;
@@ -282,7 +284,7 @@ const StyledDetails = styled.div`
 `
 
 const StyledDetail = styled.div`
-  color: #2C3437;
+  color: rgba(255,255,255,0.75);
   font-weight: 200;
 `
 
@@ -290,7 +292,7 @@ const StyledInsight = styled.div`
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  color: #818181;
+  color: rgba(255,255,255,0.85);
   width: 100%;
   margin-top: 12px;
   line-height: 32px;

@@ -10,7 +10,7 @@ const Label: React.FC<LabelProps> = ({ text }) => (
 )
 
 const StyledLabel = styled.div`
-  color: #818181;
+  color: #ffffff;
   font-weight: 300;
   text-align: center;
 `

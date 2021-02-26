@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import bee from '../../assets/img/Daohaus__Castle--Dark.svg'
+import logo from '../../assets/img/Daohaus__Castle--Dark.svg'
 
 const Logo: React.FC = () => {
   return (
     <StyledLogo to="/">
-      <img src={bee} alt="Honeycomb" height="32" style={{ marginTop: -4 }} />
+      <img src={logo} alt="FarmHaus" height="32" style={{ marginTop: -4 }} />
       <StyledText>
-        Hausfarm
+        FarmHaus
       </StyledText>
     </StyledLogo>
   )
@@ -26,7 +26,7 @@ const StyledLogo = styled(Link)`
 `
 
 const StyledText = styled.span`
-  color: #white;
+  color: white;
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   font-weight: 400;
