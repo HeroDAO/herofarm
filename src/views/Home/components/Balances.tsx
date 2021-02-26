@@ -8,7 +8,7 @@ import CardContent from '../../../components/CardContent'
 import Label from '../../../components/Label'
 import Spacer from '../../../components/Spacer'
 import Value from '../../../components/Value'
-import HoneyIcon from '../../../assets/img/honey.svg'
+import HausIcon from '../../../assets/img/daohaus__icon.png'
 import useAllEarnings from '../../../hooks/useAllEarnings'
 import useTokenBalance from '../../../hooks/useTokenBalance'
 import useHoney from '../../../hooks/useSushi'
@@ -80,10 +80,10 @@ const Balances: React.FC = () => {
           <StyledBalances>
             <StyledBalance>
               <StyledRow>
-                <img src={HoneyIcon} alt=""/>
+                <img src={HausIcon} alt="" width="48px" />
                 <Spacer />
                 <div style={{ flex: 1 }}>
-                  <Label text="Your Honey Balance" />
+                  <Label text="Your HAUS Balance" />
                   <Value
                     value={!!account ? getBalanceNumber(honeyBalance) : 'Locked'}
                     decimals={6}
@@ -96,7 +96,7 @@ const Balances: React.FC = () => {
         <Footnote>
           Pending harvest
           <FootnoteValue>
-            <PendingRewards /> HNY
+            <PendingRewards /> HAUS
           </FootnoteValue>
         </Footnote>
       </Card>
@@ -106,10 +106,10 @@ const Balances: React.FC = () => {
         <CardContent>
           <StyledBalance>
           <StyledRow>
-            <img src={HoneyIcon} alt="" />
+            <img src={HausIcon} alt="" width="48px" />
             <Spacer />
             <div style={{ flex: 1 }}>
-              <Label text="Total Honey Supply" />
+              <Label text="Total HAUS Supply" />
               <Value
                 value={totalSupply ? getBalanceNumber(totalSupply) : 'Locked'}
               />

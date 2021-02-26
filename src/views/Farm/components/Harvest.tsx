@@ -10,7 +10,7 @@ import Value from '../../../components/Value'
 import useEarnings from '../../../hooks/useEarnings'
 import useReward from '../../../hooks/useReward'
 import { getBalanceNumber } from '../../../utils/formatBalance'
-import HoneyIcon from '../../../assets/img/honey.svg'
+import HausIcon from '../../../assets/img/daohaus__icon.png'
 
 interface HarvestProps {
   poolContract: Contract
@@ -26,7 +26,7 @@ const Harvest: React.FC<HarvestProps> = ({ poolContract }) => {
       <CardContent>
         <StyledCardContentInner>
           <StyledCardHeader>
-            <CardIcon><img src={HoneyIcon} height="54px" alt="" /></CardIcon>
+            <CardIcon><img src={HausIcon} height="54px" alt="" /></CardIcon>
             <Value value={getBalanceNumber(earnings)} decimals={6} />
             <Label text="HNY Earned" />
           </StyledCardHeader>
