@@ -92,14 +92,14 @@ const Farm: React.FC = () => {
         subtitle={`Deposit ${lpTokenName}  Tokens and earn ${earnTokenName}`}
         title={name}
       />
-      {!verified && <React.Fragment>
+      {/* {!verified && <React.Fragment>
         <StakeDisclaimer>
           The tokens for this farm are not in the default Honeyswap token list.
           <br /><br />
           Only interact with this farm if you know what you are doing.
         </StakeDisclaimer>
         <Spacer size="md" />
-      </React.Fragment>}
+      </React.Fragment>} */}
       <StyledFarm>
         <StyledCardsWrapper>
           <StyledCardWrapper>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import { useWallet } from 'use-wallet'
 
-import bee from '../../assets/img/bee.svg'
+import HausIcon from '../../assets/img/daohaus__icon.png'
 
 import Button from '../../components/Button'
 import Page from '../../components/Page'
@@ -27,9 +27,9 @@ const Farms: React.FC = () => {
           <>
             <Route exact path={path}>
               <PageHeader
-                icon={<img src={bee} height="95" alt="" />}
-                subtitle="Earn Honey tokens by staking Honeyswap V2 LP Tokens."
-                title="Select Your Favorite Flowers"
+                icon={<img src={HausIcon} height="95" alt="" />}
+                subtitle="Earn HAUS tokens by staking Honeyswap V2 LP Tokens."
+                title="Select a farm haus"
               />
               <FarmCards />
             </Route>
