@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { ThemeContext } from 'styled-components'
+import React from 'react'
+// import { ThemeContext } from 'styled-components'
 import { palette } from '../../theme/colors'
 
 import { IconProps } from '../Icon'

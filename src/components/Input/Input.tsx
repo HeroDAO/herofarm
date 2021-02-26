@@ -44,6 +44,8 @@ const StyledInput = styled.input`
   border: 0;
   color: #ffffff;
   font-size: 18px;
+  font-family: 'Space Mono';
+  font-weight: 700;
   flex: 1;
   height: 48px;
   margin: 0;

@@ -27,7 +27,8 @@ export const palette = {
   // primaryAlpha: rgba('#10153d', 0.9),
   orange: '#EB8A23',
   // secondaryAlpha: rgba('#10153d', 0.75),
-  bg: '#03061B',
-  cardAlpha: "rgba(0,0,0,0.6)",
-  bgAlpha: '#03061B',
+  bg: 'rgb(3,6,27)',
+  cardAlpha: "rgba(0,0,0,0.7)",
+  bgAlpha: 'rgba(3,6,27,0.8)',
+ 
 }

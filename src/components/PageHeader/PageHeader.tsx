@@ -35,24 +35,24 @@ const StyledPageHeader = styled.div`
   margin: 0 auto;
 `
 
-const CircleIconWrapper = styled.div`
-  display: flex;
-  background: white;
-  border-radius: 50%;
-  overflow: hidden;
-  height: 90px;
-  width: 90px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-items: center;
-`
+// const CircleIconWrapper = styled.div`
+//   display: flex;
+//   background: white;
+//   border-radius: 50%;
+//   overflow: hidden;
+//   height: 90px;
+//   width: 90px;
+//   margin-bottom: 20px;
+//   justify-content: center;
+//   align-items: center;
+// `
 
-const CircleIcon = styled.div`
-  display: flex;
-  border-radius: 50%;
-  overflow: hidden;
-  text-align: center;
-`
+// const CircleIcon = styled.div`
+//   display: flex;
+//   border-radius: 50%;
+//   overflow: hidden;
+//   text-align: center;
+// `
 
 const StyledIcon = styled.div`
   height: 110px;

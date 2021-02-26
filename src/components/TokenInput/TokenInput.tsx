@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { palette } from '../../theme/colors'
 
 import Button from '../Button'
 import Input, { InputProps } from '../Input'
@@ -25,9 +26,7 @@ const TokenInput: React.FC<TokenInputProps> = ({
           <StyledTokenAdornmentWrapper>
             <StyledTokenSymbol>{symbol}</StyledTokenSymbol>
             <StyledSpacer />
-            <div>
-              <Button size="sm" text="MAX" onClick={onSelectMax} variant="secondary" color="rgb(106 195 187)" shadow="none" />
-            </div>
+              <Button text="MAX" onClick={onSelectMax} className='max-button'  />
           </StyledTokenAdornmentWrapper>
         )}
         onChange={onChange}
@@ -55,11 +54,23 @@ const StyledSpacer = styled.div`
 const StyledTokenAdornmentWrapper = styled.div`
   align-items: center;
   display: flex;
+  font-size: 12px;
+  padding-left: 12px;
+  border-left: 1px solid ${palette['orange']};
+  height: 48px;
+
+  .max-button {
+    height: 100%;
+    width: 48px;
+    transform: translateX(3px);
+    border-radius: 0 6px 6px 0;
+    font-weight: 700;
+  }
 `
 
 const StyledMaxText = styled.div`
   align-items: center;
-  color: #2C3437;
+  color: #ffffff;
   display: flex;
   font-size: 14px;
   font-weight: 700;
@@ -68,7 +79,7 @@ const StyledMaxText = styled.div`
 `
 
 const StyledTokenSymbol = styled.span`
-  color: #2C3437;
+  color: #ffffff;
   font-weight: 700;
 `
 

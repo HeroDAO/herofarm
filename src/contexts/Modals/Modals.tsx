@@ -55,10 +55,11 @@ const StyledModalWrapper = styled.div`
   justify-content: center;
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
+  
 `
 
 const StyledModalBackdrop = styled.div`
-  background-color: ${palette['bg']};
+  background-color: ${palette['bgAlpha']};
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
 `
