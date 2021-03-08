@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           margin: '0 auto',
         }}
       >
-        <Button text="Back to DAOhaus" href="https://app.daohaus.club" variant="default" />
+        <Button text="Go to Honeyswap" href="https://app.honeyswap.org" variant="default" />
       </div>
     </Page>
   )

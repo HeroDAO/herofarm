@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Button from '../../components/Button'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
 import useSushi from '../../hooks/useSushi'
@@ -13,15 +14,15 @@ import Stake from './components/Stake'
 import { formatAddress } from '../../utils'
 import { lpTokenValue } from '../../utils/lpToken'
 import { getFactoryContract } from '../../sushi/utils'
-import { replacePoolName } from '../../utils/hardcoded'
+import { getHardCodedData } from '../../utils/hardcoded'
 
 const Farm: React.FC = () => {
   // @ts-ignore
   const { farmId } = useParams()
   const {
-    lpToken,
-    earnToken,
-    name,
+    // lpToken,
+    // earnToken,
+    // name,
     icon,
     lpContract,
     poolContract,
@@ -35,17 +36,19 @@ const Farm: React.FC = () => {
     lpContract: null,
   }
 
+  const hardCoded = getHardCodedData(farmId)
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
-  const lpTokenName = useMemo(() => {
-    return replacePoolName(lpToken.toUpperCase())
-  }, [lpToken])
+  // const lpTokenName = useMemo(() => {
+  //   return replacePoolName(lpToken.toUpperCase())
+  // }, [lpToken])
 
-  const earnTokenName = useMemo(() => {
-    return replacePoolName(earnToken.toUpperCase())
-  }, [earnToken])
+  // const earnTokenName = useMemo(() => {
+  //   return replacePoolName(earnToken.toUpperCase())
+  // }, [earnToken])
 
   const sushi = useSushi()
   const factoryContract = getFactoryContract(sushi)
@@ -92,11 +95,15 @@ const Farm: React.FC = () => {
       <PageHeader
         circle
         icon={icon}
-        subtitle={`Deposit ${lpTokenName} and earn ${earnTokenName}`}
-        title={replacePoolName(name)}
+        subtitle={hardCoded.subtitle}
+        title={hardCoded.name}
       />
-      <p>Get HAUS/ETH Pool Tokens by adding Liquidity to HAUS/ETH pool on Honeyswap</p>
-      <a href="https://app.honeyswap.org/" rel="noopener noreferrer" target="_blank">Go to Honeyswap</a>
+      { hardCoded.name === 'Shogun' && (
+      <div style={{margin: '15px auto 35px' }}>
+        <p>Get HAUS/ETH Pool Tokens by adding liquidity to HAUS/ETH pool on Honeyswap</p>
+        <Button text="Get HAUS/ETH on Honeyswap" href="https://app.honeyswap.org/#/pool" variant="default" />
+      </div>
+      )}
       {/* {!verified && <React.Fragment>
         <StakeDisclaimer>
           The tokens for this farm are not in the default Honeyswap token list.
@@ -105,6 +112,7 @@ const Farm: React.FC = () => {
         </StakeDisclaimer>
         <Spacer size="md" />
       </React.Fragment>} */}
+
       <StyledFarm>
         <StyledCardsWrapper>
           <StyledCardWrapper>
@@ -115,7 +123,7 @@ const Farm: React.FC = () => {
             <Stake
               lpContract={lpContract}
               poolContract={poolContract}
-              tokenName={replacePoolName(lpToken.toUpperCase())}
+              tokenName={hardCoded.stakeToken}
             />
           </StyledCardWrapper>
         </StyledCardsWrapper>
