@@ -13,8 +13,10 @@ import Stake from './components/Stake'
 import { formatAddress } from '../../utils'
 import { lpTokenValue } from '../../utils/lpToken'
 import { getFactoryContract } from '../../sushi/utils'
+import { replacePoolName } from '../../utils/hardcoded'
 
 const Farm: React.FC = () => {
+  // @ts-ignore
   const { farmId } = useParams()
   const {
     lpToken,
@@ -38,11 +40,11 @@ const Farm: React.FC = () => {
   }, [])
 
   const lpTokenName = useMemo(() => {
-    return lpToken.toUpperCase()
+    return replacePoolName(lpToken.toUpperCase())
   }, [lpToken])
 
   const earnTokenName = useMemo(() => {
-    return earnToken.toUpperCase()
+    return replacePoolName(earnToken.toUpperCase())
   }, [earnToken])
 
   const sushi = useSushi()
@@ -53,10 +55,11 @@ const Farm: React.FC = () => {
     if (!factoryContract || !lpContract) return
 
     const fetchFundingAddress = async () => {
-      const { proxy } = await factoryContract.methods.pools(lpContract.options.address).call()
+      const { proxy } = await factoryContract.methods
+        .pools(lpContract.options.address)
+        .call()
       setFundingAddress(proxy)
     }
-
     fetchFundingAddress()
   }, [sushi, factoryContract, lpContract])
 
@@ -75,7 +78,7 @@ const Farm: React.FC = () => {
 
   const [farmingPeriodEnd, setFarmingPeriodEnd] = useState(null)
   useEffect(() => {
-    async function fetchPeriodFinish () {
+    async function fetchPeriodFinish() {
       setFarmingPeriodEnd(await poolContract.methods.periodFinish().call())
     }
 
@@ -90,7 +93,7 @@ const Farm: React.FC = () => {
         circle
         icon={icon}
         subtitle={`Deposit ${lpTokenName}  Tokens and earn ${earnTokenName}`}
-        title={name}
+        title={replacePoolName(name)}
       />
       {/* {!verified && <React.Fragment>
         <StakeDisclaimer>
@@ -110,7 +113,7 @@ const Farm: React.FC = () => {
             <Stake
               lpContract={lpContract}
               poolContract={poolContract}
-              tokenName={lpToken.toUpperCase()}
+              tokenName={replacePoolName(lpToken.toUpperCase())}
             />
           </StyledCardWrapper>
         </StyledCardsWrapper>
@@ -121,7 +124,9 @@ const Farm: React.FC = () => {
             <div>
               {farmingPeriodEnd ? (
                 <Countdown deadline={farmingPeriodEnd} />
-              ) : 'Loading...'}
+              ) : (
+                'Loading...'
+              )}
             </div>
           </div>
           <div>
@@ -133,11 +138,15 @@ const Farm: React.FC = () => {
           <div>
             <div>Price for your staked LP tokens</div>
             <div>
-              {lpTokenPrice ? `$${lpTokenPrice.times(stakedBalance.div('1e18')).toFixed(2)}` : 'Loading...'}
+              {lpTokenPrice
+                ? `$${lpTokenPrice.times(stakedBalance.div('1e18')).toFixed(2)}`
+                : 'Loading...'}
             </div>
           </div>
           <div>
-            <div>Funding address (do <b>NOT</b> send your LP tokens here)</div>
+            <div>
+              Funding address (do <b>NOT</b> send your LP tokens here)
+            </div>
             <a href={`https://blockscout.com/address/${fundingAddress}`}>
               {fundingAddress ? formatAddress(fundingAddress) : 'Loading...'}
             </a>
@@ -153,7 +162,7 @@ const StyledAddresses = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   font-family: Overpass;
   font-style: normal;
   font-weight: 300;
@@ -167,12 +176,12 @@ const StyledAddresses = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
     align-items: center;
   }
 
   a {
-    color: #2C3437;
+    color: #2c3437;
     text-decoration: none;
     padding: 0 12px;
     border-radius: 4px;
