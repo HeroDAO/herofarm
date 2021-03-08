@@ -1,0 +1,15 @@
+{
+  "short_name": "FarmHaus",
+  "name": "Stake $HAUS, Earn $HAUS",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/ico",
+      "sizes": "240x240"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
