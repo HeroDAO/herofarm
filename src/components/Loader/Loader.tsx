@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
 import CardIcon from '../CardIcon'
-import HoneyIcon from '../../assets/img/honey.svg'
+import DaoHaus from '../../assets/img/daohaus__icon.png'
 
 interface LoaderProps {
   text?: string
@@ -12,7 +12,9 @@ const Loader: React.FC<LoaderProps> = ({ text }) => {
   return (
     <StyledLoader>
       <CardIcon>
-        <StyledHoney><img src={HoneyIcon} alt="Loading..." /></StyledHoney>
+        <StyledHoney>
+          <img src={DaoHaus} height="50px" alt="Loading..." />
+        </StyledHoney>
       </CardIcon>
       {!!text && <StyledText>{text}</StyledText>}
     </StyledLoader>
