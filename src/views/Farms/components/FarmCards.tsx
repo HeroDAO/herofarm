@@ -14,24 +14,21 @@ import useFarms from '../../../hooks/useFarms'
 import useTokenPrice from '../../../hooks/useTokenPrice'
 import { INTEGERS } from '../../../sushi/lib/constants'
 import { lpTokenValue } from '../../../utils/lpToken'
-import { getHardCodedData, replacePoolName } from '../../../utils/hardcoded'
-
+import { getHardCodedData } from '../../../utils/hardcoded'
 
 interface FarmWithApy extends Farm {
-  apy: BigNumber,
+  apy: BigNumber
   poolAddress?: string
 }
-
-
 
 // const curatedActiveFarms = [
 //   //EMPTY
 //   "no farms are funded atm",
-//   // HNY-LINK 
+//   // HNY-LINK
 //   // "0x90d029ddbf3fb4662eceefb7f31d052f4e07856e",
 //   // WETH-WBTC
 //   // "0xadcd8e1699158627f072b080528f0ea6d020e46a",
-//   // WBTC-XDAI 
+//   // WBTC-XDAI
 //   // "0x704876d066cded601f668ee2da0519da465cbf93",
 //   // XDAI-HNY
 //   // "0x8520fc4c282342f8e746b881b9b60c14f96a0fab",
@@ -78,12 +75,10 @@ const FarmCards: React.FC = () => {
   // by getting the reward token address per pool
   // instead of assuming it is Honey
   const honeyAddress = getSushiAddress(sushi)
-  const honeyPrice = useTokenPrice(
-    honeyAddress
-  )
+  const honeyPrice = useTokenPrice(honeyAddress)
 
   // Calculate APYs
-  const [apy, setApy] = useState<{[farmId: string]: BigNumber}>({})
+  const [apy, setApy] = useState<{ [farmId: string]: BigNumber }>({})
 
   useEffect(() => {
     async function calculateApys() {
@@ -111,12 +106,12 @@ const FarmCards: React.FC = () => {
   const farmsWithApy = farms
     .map<FarmWithApy>((farm) => ({
       ...farm,
-      apy: apy[farm.id]
+      apy: apy[farm.id],
     }))
     .sort((a, b) => b.rewards.minus(a.rewards).toNumber())
 
   // const ACTIVE_THRESHOLD = new BigNumber(0.5)
-  
+
   // Use this when there's active farms
   // const activeFarms = farmsWithApy
   //   .filter((farm) => farm.rewards.gt(ACTIVE_THRESHOLD))
@@ -131,29 +126,25 @@ const FarmCards: React.FC = () => {
   //   .filter((farm) => farm.rewards.lt(ACTIVE_THRESHOLD))
 
   return (
-      <StyledCards>
-       {farmsWithApy.length ? (
-          farmsWithApy.map((farm, i) => (
-            <FarmCard farm={farm} key={i} />
-          ))
-        ) : (
-          <StyledLoadingWrapper>
-            <Loader text="Loading..." />
-          </StyledLoadingWrapper>
-        )}
-      </StyledCards>
+    <StyledCards>
+      {farmsWithApy.length ? (
+        farmsWithApy.map((farm, i) => <FarmCard farm={farm} key={i} />)
+      ) : (
+        <StyledLoadingWrapper>
+          <Loader text="Loading..." />
+        </StyledLoadingWrapper>
+      )}
+    </StyledCards>
   )
 }
 
-
 interface FarmCardProps {
-  farm: FarmWithApy;
+  farm: FarmWithApy
   // index: Number;
 }
 
-
 const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
- const withHardCoded = getHardCodedData(farm)
+  const withHardCoded = getHardCodedData(farm)
   return (
     <StyledCardWrapper>
       <Card>
@@ -168,8 +159,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             </CardIcon>
             <StyledTitle>{withHardCoded?.name || farm.name}</StyledTitle>
             <StyledDetails>
-              <StyledDetail>Deposit {replacePoolName(farm.lpToken)}</StyledDetail>
-              <StyledDetail>Earn HAUS</StyledDetail>
+              <StyledDetail>{withHardCoded?.p1}</StyledDetail>
+              <StyledDetail>{withHardCoded?.p2}</StyledDetail>
             </StyledDetails>
             <Spacer />
             <Button text={'Select'} to={`/farms/${farm.id}`} />
@@ -267,7 +258,7 @@ const StyledDetails = styled.div`
 `
 
 const StyledDetail = styled.div`
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 200;
 `
 
@@ -275,7 +266,7 @@ const StyledInsight = styled.div`
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   width: 100%;
   margin-top: 12px;
   line-height: 32px;
