@@ -92,9 +92,11 @@ const Farm: React.FC = () => {
       <PageHeader
         circle
         icon={icon}
-        subtitle={`Deposit ${lpTokenName}  Tokens and earn ${earnTokenName}`}
+        subtitle={`Deposit ${lpTokenName} and earn ${earnTokenName}`}
         title={replacePoolName(name)}
       />
+      <p>Get HAUS/ETH Pool Tokens by adding Liquidity to HAUS/ETH pool on Honeyswap</p>
+      <a href="https://app.honeyswap.org/" rel="noopener noreferrer" target="_blank">Go to Honeyswap</a>
       {/* {!verified && <React.Fragment>
         <StakeDisclaimer>
           The tokens for this farm are not in the default Honeyswap token list.

@@ -75,7 +75,7 @@ const Stake: React.FC<StakeProps> = ({ lpContract, poolContract, tokenName }) =>
           <StyledCardHeader>
             <CardIcon><img src={HausIcon} height="80px" alt="" /></CardIcon>
             <Value value={getBalanceNumber(stakedBalance)} decimals={6} />
-            <Label text={`${tokenName} Tokens Staked`} />
+            <Label text={`${tokenName} Staked`} />
           </StyledCardHeader>
           <StyledCardActions>
             {(stakedBalance.eq(0) && allowance.eq(0)) ? (

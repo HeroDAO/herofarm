@@ -159,7 +159,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             </CardIcon>
             <StyledTitle>{withHardCoded?.name || farm.name}</StyledTitle>
             <StyledDetails>
-              <StyledDetail>{withHardCoded?.p1}</StyledDetail>
+              <StyledDetail><strong>{withHardCoded?.p1}</strong></StyledDetail>
               <StyledDetail>{withHardCoded?.p2}</StyledDetail>
             </StyledDetails>
             <Spacer />

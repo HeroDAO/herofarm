@@ -10,14 +10,14 @@ interface PoolData {
 
 const shogun = {
   name: 'Shogun',
-  p1: 'Stake $HAUS/ETH Uni LP',
-  p2: 'Get 2x Rewards, Soft Signaling',
+  p1: 'Stake HAUS/ETH Pool Tokens',
+  p2: 'Get 2x HAUS Rewards, Signal Governance',
   icon: hausEthIcon,
 }
-const ronan = {
-  name: 'Ronan',
-  p1: 'Stake $HAUS on your own',
-  p2: 'Get 1x rewards, Soft Signaling',
+const ronin = {
+  name: 'Ronin',
+  p1: 'Stake HAUS',
+  p2: 'Get 1x HAUS rewards, Signal Governance',
   icon: hausIcon,
 }
 
@@ -30,7 +30,7 @@ export const getHardCodedData = (farm: any): PoolData => {
   } else if (farm.id === 'fHAUS-undefined UNI-V2 LP') {
     return {
       ...farm,
-      ...ronan,
+      ...ronin,
     }
   } else {
     return { ...farm, description: 'No description' }
@@ -39,13 +39,13 @@ export const getHardCodedData = (farm: any): PoolData => {
 
 export const replacePoolName = (str: string): string => {
   if (/FHAUS-UNDEFINED UNI-V2 LP/gi.test(str)) {
-    return str.replace(/FHAUS-UNDEFINED UNI-V2 LP/gi, 'Ronan')
+    return str.replace(/FHAUS-UNDEFINED UNI-V2 LP/gi, 'HAUS')
   } else if (/fHAUS-WETH UNI-V2 LP/gi.test(str)) {
-    return str.replace(/fHAUS-WETH UNI-V2 LP/gi, 'Shogun')
+    return str.replace(/fHAUS-WETH UNI-V2 LP/gi, 'HAUS/ETH Pool Tokens')
   } else if (/fHAUS-undefined/gi.test(str)) {
-    return str.replace(/fHAUS-undefined/gi, 'Ronan')
+    return str.replace(/fHAUS-undefined/gi, 'HAUS')
   } else if (/fHAUS-weth/gi.test(str)) {
-    return str.replace(/fHAUS-weth/gi, 'Shogun')
+    return str.replace(/fHAUS-weth/gi, 'HAUS/ETH Pool Tokens')
   } else if (/fHAUS/gi.test(str)) {
     return str.replace(/fHAUS/gi, 'Haus')
   } else {
