@@ -3,8 +3,8 @@
   "name": "Stake $HAUS, Earn $HAUS",
   "icons": [
     {
-      "src": "favicon.svg",
-      "type": "image/png",
+      "src": "favicon.ico",
+      "type": "image/ico",
       "sizes": "240x240"
     }
   ],
