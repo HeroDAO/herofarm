@@ -13,15 +13,15 @@ import Stake from './components/Stake'
 import { formatAddress } from '../../utils'
 import { lpTokenValue } from '../../utils/lpToken'
 import { getFactoryContract } from '../../sushi/utils'
-import { replacePoolName } from '../../utils/hardcoded'
+import { getHardCodedData, replacePoolName } from '../../utils/hardcoded'
 
 const Farm: React.FC = () => {
   // @ts-ignore
   const { farmId } = useParams()
   const {
-    lpToken,
-    earnToken,
-    name,
+    // lpToken,
+    // earnToken,
+    // name,
     icon,
     lpContract,
     poolContract,
@@ -35,17 +35,19 @@ const Farm: React.FC = () => {
     lpContract: null,
   }
 
+  const hardCoded = getHardCodedData(farmId)
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
-  const lpTokenName = useMemo(() => {
-    return replacePoolName(lpToken.toUpperCase())
-  }, [lpToken])
+  // const lpTokenName = useMemo(() => {
+  //   return replacePoolName(lpToken.toUpperCase())
+  // }, [lpToken])
 
-  const earnTokenName = useMemo(() => {
-    return replacePoolName(earnToken.toUpperCase())
-  }, [earnToken])
+  // const earnTokenName = useMemo(() => {
+  //   return replacePoolName(earnToken.toUpperCase())
+  // }, [earnToken])
 
   const sushi = useSushi()
   const factoryContract = getFactoryContract(sushi)
@@ -92,17 +94,10 @@ const Farm: React.FC = () => {
       <PageHeader
         circle
         icon={icon}
-        subtitle={`Deposit ${lpTokenName}  Tokens and earn ${earnTokenName}`}
-        title={replacePoolName(name)}
+        subtitle={hardCoded.subtitle}
+        title={hardCoded.name}
       />
-      {/* {!verified && <React.Fragment>
-        <StakeDisclaimer>
-          The tokens for this farm are not in the default Honeyswap token list.
-          <br /><br />
-          Only interact with this farm if you know what you are doing.
-        </StakeDisclaimer>
-        <Spacer size="md" />
-      </React.Fragment>} */}
+
       <StyledFarm>
         <StyledCardsWrapper>
           <StyledCardWrapper>
@@ -113,7 +108,7 @@ const Farm: React.FC = () => {
             <Stake
               lpContract={lpContract}
               poolContract={poolContract}
-              tokenName={replacePoolName(lpToken.toUpperCase())}
+              tokenName={hardCoded.stakeToken}
             />
           </StyledCardWrapper>
         </StyledCardsWrapper>
