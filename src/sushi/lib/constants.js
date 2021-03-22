@@ -46,8 +46,7 @@ export const INTEGERS = {
 
 export const contractAddresses = {
   sushi: {
-    100: '0x71850b7E9Ee3f13Ab46d67167341E4bDc905Eef9',
-    // 42: '0x4505b262DC053998C10685DC5F9098af8AE5C8ad',
+    100: '0xb0c5f3100a4d9d9532a4cfd68c55f1ae8da987eb',
     42: '0xAb5cC910998Ab6285B4618562F1e17f3728af662',
   },
   weth: {
@@ -55,8 +54,7 @@ export const contractAddresses = {
     42: '0xd0a1e359811322d97991e03f863a0c30c2cf029c',
   },
   factory: {
-    100: '0xE29DCD715D11455194D7d74c622F3c42C8a37040',
-    // 42: '0x1c06d4B3c6B3699dB45986C15d12200b067D4339',
+    100: '0xeB7611B7DBA0ad92e2668C1b9Ba876dEfaf27ecD',
     42: '0xd069B4d325A736a1D42ce344d3B92827718625A0',
   },
 }
