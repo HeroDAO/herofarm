@@ -2,8 +2,10 @@ import hausIcon from '../assets/img/haus__icon.png'
 import hausEthIcon from '../assets/img/haus-eth__icon.png'
 
 const FARM_ID = {
-  SHOGUN: 'fHAUS-WETH UNI-V2 LP',
-  RONIN: 'fHAUS-undefined UNI-V2 LP',
+  // SHOGUN: 'fHAUS-WETH UNI-V2 LP',
+  // RONIN: 'fHAUS-undefined UNI-V2 LP',
+  SHOGUN: 'trash-WXDAI UNI-V2 LP',
+  RONIN: 'trash-undefined UNI-V2 LP',
 }
 
 interface PoolData {
