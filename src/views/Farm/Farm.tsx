@@ -100,8 +100,8 @@ const Farm: React.FC = () => {
       />
       { hardCoded.name === 'Shogun' && (
       <div style={{margin: '15px auto 35px' }}>
-        <p>Get HAUS/ETH Pool Tokens by adding liquidity to HAUS/ETH pool on Honeyswap</p>
-        <Button text="Get HAUS/ETH on Honeyswap" href="https://app.honeyswap.org/#/pool" variant="default" />
+        <p>Get WXDAI/HAUS Pool Tokens by adding liquidity to WXDAI/HAUS pool on Honeyswap</p>
+        <Button text="Get WXDAI/HAUS on Honeyswap" href="https://app.honeyswap.org/#/pool" variant="default" />
       </div>
       )}
       {/* {!verified && <React.Fragment>
