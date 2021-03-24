@@ -21,12 +21,12 @@ interface PoolData {
 
 const shogun = {
   name: 'Shogun',
-  p1: 'Stake HAUS/ETH Pool Tokens',
+  p1: 'Stake WXDAI/HAUS Pool Tokens',
   p2: 'Get 2x HAUS Rewards, Signal Governance',
-  subtitle: 'Stake HAUS/ETH Pool Tokens to earn more HAUS',
+  subtitle: 'Stake WXDAI/HAUS Pool Tokens to earn more HAUS',
   icon: hausEthIcon,
   earnToken: 'HAUS',
-  stakeToken: 'ETH/HAUS',
+  stakeToken: 'WXDAI/HAUS',
   url: 'google.com',
 }
 
@@ -52,16 +52,16 @@ export const getHardCodedData = (farm: any): PoolData => {
 }
 
 export const replacePoolName = (str: string): string => {
-  if (/FHAUS-UNDEFINED UNI-V2 LP/gi.test(str)) {
-    return str.replace(/FHAUS-UNDEFINED UNI-V2 LP/gi, 'HAUS')
-  } else if (/fHAUS-WETH UNI-V2 LP/gi.test(str)) {
-    return str.replace(/fHAUS-WETH UNI-V2 LP/gi, 'HAUS/ETH Pool Tokens')
-  } else if (/fHAUS-undefined/gi.test(str)) {
-    return str.replace(/fHAUS-undefined/gi, 'HAUS')
-  } else if (/fHAUS-weth/gi.test(str)) {
-    return str.replace(/fHAUS-weth/gi, 'HAUS/ETH Pool Tokens')
-  } else if (/fHAUS/gi.test(str)) {
-    return str.replace(/fHAUS/gi, 'Haus')
+  if (/trash-UNDEFINED UNI-V2 LP/gi.test(str)) {
+    return str.replace(/trash-UNDEFINED UNI-V2 LP/gi, 'HAUS')
+  } else if (/trash-WXDAI UNI-V2 LP/gi.test(str)) {
+    return str.replace(/trash-WXDAI UNI-V2 LP/gi, 'WXDAI/HAUS Pool Tokens')
+  } else if (/trash-undefined/gi.test(str)) {
+    return str.replace(/trash-undefined/gi, 'HAUS')
+  } else if (/trash-wxdai/gi.test(str)) {
+    return str.replace(/trash-wxdai/gi, 'WXDAI/HAUS Pool Tokens')
+  } else if (/trash/gi.test(str)) {
+    return str.replace(/trash/gi, 'Haus')
   } else {
     return str
   }
