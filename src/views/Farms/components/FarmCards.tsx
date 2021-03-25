@@ -90,11 +90,21 @@ const FarmCards: React.FC = () => {
           continue
         }
 
-        result[farm.id] = honeyPrice
+        console.log('honeyPrice', honeyPrice.toString())
+        if (farm.id === "trash-undefined UNI-V2 LP") {
+          result[farm.id] = honeyPrice
+          .times(farm.rewardRate)
+          .times(INTEGERS.ONE_YEAR_IN_SECONDS)
+          .div(farm.staked)
+          .div(honeyPrice)
+          
+        } else {
+          result[farm.id] = honeyPrice
           .times(farm.rewardRate)
           .times(INTEGERS.ONE_YEAR_IN_SECONDS)
           .div(farm.staked)
           .div(await lpTokenValue(farm.lpContract))
+        }
       }
       setApy(result)
     }
@@ -145,6 +155,7 @@ interface FarmCardProps {
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   const withHardCoded = getHardCodedData(farm)
+  // console.log('farm.apy', farm.apy)
   return (
     <StyledCardWrapper>
       <Card>
@@ -166,7 +177,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             <Button text={'Select'} to={`/farms/${farm.id}`} />
             <StyledInsight>
               <span>APY</span>
-              {/* <span>
+              <span>
                 {farm.apy
                   ? `${farm.apy
                       .times(new BigNumber(100))
@@ -174,7 +185,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                       .toLocaleString('en-US')
                       .slice(0, -1)}%`
                   : '-'}
-              </span> */}
+              </span>
               <span>
                 {farm.rewards
                   ? (farm.rewards.toNumber() || 0).toLocaleString('en-US')
