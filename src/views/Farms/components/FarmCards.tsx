@@ -91,7 +91,7 @@ const FarmCards: React.FC = () => {
         }
 
         console.log('honeyPrice', honeyPrice.toString())
-        if (farm.id === "trash-undefined UNI-V2 LP") {
+        if (farm.id === "HAUS-undefined UNI-V2 LP") {
           result[farm.id] = honeyPrice
           .times(farm.rewardRate)
           .times(INTEGERS.ONE_YEAR_IN_SECONDS)
