@@ -4,7 +4,7 @@ import hausEthIcon from '../assets/img/haus-eth__icon.png'
 const FARM_ID = {
   // SHOGUN: 'fHAUS-WETH UNI-V2 LP',
   // RONIN: 'fHAUS-undefined UNI-V2 LP',
-  SHOGUN: 'HAUS-XDAI UNI-V2 LP',
+  SHOGUN: 'HAUS-WXDAI UNI-V2 LP',
   RONIN: 'HAUS-undefined UNI-V2 LP',
 }
 
