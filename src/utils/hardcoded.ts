@@ -34,7 +34,7 @@ const ronin = {
   name: 'Ronin',
   p1: 'Stake HAUS',
   p2: 'Get 1x HAUS rewards, Signal Governance',
-  subtitle: 'Stake HAUS to earn more HAUS',
+  subtitle: 'Stake HAUS to particiapte in Snapshot signaling',
   icon: hausIcon,
   earnToken: 'HAUS',
   stakeToken: 'HAUS',
