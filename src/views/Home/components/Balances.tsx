@@ -110,9 +110,21 @@ const Balances: React.FC = () => {
             <img src={HausIcon} alt="" width="48px" />
             <Spacer />
             <div style={{ flex: 1 }}>
-              <Label text="Total HAUS Supply" />
+              <Label text="HAUS on xDai" />
               <Value
                 value={totalSupply ? getBalanceNumber(totalSupply) : 'Locked'}
+              />
+            </div>
+          </StyledRow>
+          </StyledBalance>
+          <StyledBalance>
+          <StyledRow>
+            <img src={HausIcon} alt="" width="48px" />
+            <Spacer />
+            <div style={{ flex: 1 }}>
+              <Label text="Total HAUS Supply" />
+              <Value
+                value={totalSupply ? '1,000,000' : 'Locked'}
               />
             </div>
           </StyledRow>
@@ -122,6 +134,7 @@ const Balances: React.FC = () => {
     </StyledWrapper>
   )
 }
+
 
 const StyledRow = styled.div`
   display: flex;
@@ -158,6 +171,7 @@ const StyledBalance = styled.div`
   align-items: flex-start;
   display: flex;
   flex: 1;
+  margin: 10px 20px;
 `
 
 export default Balances

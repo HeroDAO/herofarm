@@ -24,9 +24,20 @@ const Home: React.FC = () => {
       <div
         style={{
           margin: '0 auto',
+          display: 'flex',
+          flexDirection: 'row',
+          width: '30%',
+          padding: '0 10%',
+          justifyContent: 'space-between',
         }}
       >
-        <Button text="Go to Honeyswap" href="https://app.honeyswap.org" variant="default" />
+        <div style={{ width: '40%' }}>
+          <Button text="Go to Honeyswap" href="https://app.honeyswap.org" className="outline honeyswap" />
+        </div>
+        <div style={{ width: '40%' }}>
+          <Button text="Go to Farms" to="/farms" variant="default" />
+        </div>
+        
       </div>
     </Page>
   )

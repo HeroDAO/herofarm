@@ -174,7 +174,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               <StyledDetail>{withHardCoded?.p2}</StyledDetail>
             </StyledDetails>
             <Spacer />
-            <Button text={'Select'} to={`/farms/${farm.id}`} />
+            <StyledButton text={'Select'} to={`/farms/${farm.id}`} />
             <StyledInsight>
               <span>APY</span>
               <span>
@@ -242,7 +242,7 @@ const StyledLoadingWrapper = styled.div`
 
 const StyledCardWrapper = styled.div`
   display: flex;
-  width: calc((900px - ${(props) => props.theme.spacing[4]}px * 2) / 3);
+  width: calc((900px - ${(props) => props.theme.spacing[4]}px * 2) / 2.4);
   margin: ${(props) => props.theme.spacing[2]}px;
   margin-bottom: ${(props) => props.theme.spacing[4]}px;
   margin-top: 0;
@@ -266,6 +266,7 @@ const StyledContent = styled.div`
 const StyledDetails = styled.div`
   margin-top: ${(props) => props.theme.spacing[2]}px;
   text-align: center;
+  width: 80%;
 `
 
 const StyledDetail = styled.div`
@@ -284,5 +285,10 @@ const StyledInsight = styled.div`
   font-size: 13px;
   text-align: center;
 `
+
+const StyledButton = styled(Button)`
+  width: 50%;
+  margin: 0 auto;
+`;
 
 export default FarmCards
