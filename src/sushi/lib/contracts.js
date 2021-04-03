@@ -8,7 +8,7 @@ import {
   contractAddresses,
   SUBTRACT_GAS_LIMIT,
   knownPools,
-  INTEGERS
+  INTEGERS,
 } from './constants.js'
 import * as Types from './types.js'
 
@@ -41,14 +41,14 @@ export class Contracts {
     earnToken,
     rewards,
     staked,
-    verified
+    verified,
   }) {
     const poolContract = new this.web3.eth.Contract(PoolAbi)
     this.setProviderForContract(poolContract, poolAddress)
 
     // Get reward rate for the pool
     const rewardRate = new BigNumber(
-      await poolContract.methods.rewardRate().call()
+      await poolContract.methods.rewardRate().call(),
     )
 
     // Get Uniswap pair address from pool
@@ -58,20 +58,25 @@ export class Contracts {
     // Check if it is a known pool
     const metadata = knownPools[poolAddress] || {}
 
-    this.pools.push(Object.assign({
-      lpAddress,
-      lpContract,
-      poolAddress,
-      poolContract,
-      name: `${token0Symbol}-${token1Symbol} Pool`,
-      symbol: `${token0Symbol}-${token1Symbol} UNI-V2 LP`,
-      earnToken,
-      earnTokenAddress,
-      rewards,
-      rewardRate: rewardRate.div(INTEGERS.INTEREST_RATE_BASE),
-      staked,
-      verified
-    }, metadata))
+    this.pools.push(
+      Object.assign(
+        {
+          lpAddress,
+          lpContract,
+          poolAddress,
+          poolContract,
+          name: `${token0Symbol}-${token1Symbol} Pool`,
+          symbol: `${token0Symbol}-${token1Symbol} UNI-V2 LP`,
+          earnToken,
+          earnTokenAddress,
+          rewards,
+          rewardRate: rewardRate.div(INTEGERS.INTEREST_RATE_BASE),
+          staked,
+          verified,
+        },
+        metadata,
+      ),
+    )
   }
 
   setProvider(provider, networkId) {
@@ -80,7 +85,10 @@ export class Contracts {
 
     this.setProviderForContract(this.sushi, contractAddresses.sushi[networkId])
     this.setProviderForContract(this.weth, contractAddresses.weth[networkId])
-    this.setProviderForContract(this.factory, contractAddresses.factory[networkId])
+    this.setProviderForContract(
+      this.factory,
+      contractAddresses.factory[networkId],
+    )
 
     this.pools.forEach(
       ({ lpContract, lpAddress, poolAddress, poolContract }) => {

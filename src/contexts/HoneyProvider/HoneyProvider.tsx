@@ -9,6 +9,7 @@ import { Sushi } from '../../sushi'
 // TODO(onbjerg): Make these type definitions more strict
 interface Contracts {
   factory: any,
+  pools: [],
   addPool(poolDefinition: {
     poolAddress: string,
     lpAddress: string,
