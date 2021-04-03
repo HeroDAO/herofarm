@@ -26,6 +26,7 @@ const Farms: React.FC = ({ children }) => {
 
   useEffect(() => {
     async function fetchFarms () {
+      sushi.contracts.pools = []
       await Promise.all(data.pools.map(async (pool: any) => {
         const token0Exists = tokenAddresses.includes(pool.pair.token0?.id)
         const token1Exists = tokenAddresses.includes(pool.pair.token1?.id)
@@ -41,8 +42,8 @@ const Farms: React.FC = ({ children }) => {
           verified: token0Exists && token1Exists
         })
       }))
-
-      setFarms(getFarms(sushi))
+      const farms = getFarms(sushi)
+      setFarms(farms)
     }
 
     if (status === 'connected' && !loading && tokenAddresses.length) {

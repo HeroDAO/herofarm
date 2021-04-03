@@ -51,7 +51,6 @@ const Providers: React.FC = ({ children }) => {
       <UseWalletProvider
         chainId={100}
         // chainId={42}
-
       >
         <HoneyProvider>
           <TransactionProvider>
