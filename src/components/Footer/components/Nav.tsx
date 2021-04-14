@@ -23,13 +23,13 @@ const Nav: React.FC = () => {
         <StyledHeader>
           Community
         </StyledHeader>
-        <Link href="https://discord.gg/qQzctSNppQ" external>
+        <Link href="https://discord.gg/Fxwfj7t3Kt" external>
           Discord
         </Link>
-        <Link href="https://github.com/1Hive" external>
+        <Link href="https://github.com/HausDAO" external>
           Github
         </Link>
-        <Link href="https://twitter.com/1HiveOrg" external>
+        <Link href="https://twitter.com/nowdaoit" external>
           Twitter
         </Link>
       </StyledDivMargin>
