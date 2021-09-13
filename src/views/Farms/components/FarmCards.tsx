@@ -177,14 +177,14 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
             <StyledButton text={'Select'} to={`/farms/${farm.id}`} />
             <StyledInsight>
               <span>APY</span>
-              <span>
-                {farm.apy
+              <span> 0%
+                {/* {farm.apy
                   ? `${farm.apy
                       .times(new BigNumber(100))
                       .toNumber()
                       .toLocaleString('en-US')
                       .slice(0, -1)}%`
-                  : '-'}
+                  : '-'} */}
               </span>
               <span>
                 {farm.rewards
