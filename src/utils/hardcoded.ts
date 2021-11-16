@@ -1,5 +1,5 @@
-import hausIcon from '../assets/img/haus__icon.png'
-import hausEthIcon from '../assets/img/haus-eth__icon.png'
+import herodao_logo from '../assets/img/herodao_logo.png'
+import heroeth_icon from '../assets/img/herodaoeth_icon.svg'
 
 const FARM_ID = {
   // SHOGUN: 'fHAUS-WETH UNI-V2 LP',
@@ -20,24 +20,24 @@ interface PoolData {
 }
 
 const shogun = {
-  name: 'Shogun',
-  p1: 'Stake XDAI/HAUS Pool Tokens',
-  p2: 'Get 2x HAUS Rewards, Signal Governance',
-  subtitle: 'Stake XDAI/HAUS Pool Tokens to earn more HAUS',
-  icon: hausEthIcon,
-  earnToken: 'HAUS',
-  stakeToken: 'XDAI/HAUS',
+  name: 'Hero',
+  p1: 'Stake ETH/MOONROCK Pool Tokens',
+  p2: 'Get 2x MOONROCK Rewards, Signal Governance',
+  subtitle: 'Stake ETH/MOONROCK Pool Tokens to earn more MOONROCK',
+  icon: heroeth_icon,
+  earnToken: 'MOONROCK',
+  stakeToken: 'ETH/MOONROCK',
   url: 'google.com',
 }
 
 const ronin = {
-  name: 'Ronin',
-  p1: 'Stake HAUS',
-  p2: 'Get 1x HAUS rewards, Signal Governance',
-  subtitle: 'Stake HAUS to particiapte in Snapshot signaling',
-  icon: hausIcon,
-  earnToken: 'HAUS',
-  stakeToken: 'HAUS',
+  name: 'Sidekick',
+  p1: 'Stake MOONROCK',
+  p2: 'Get 1x MOONROCK rewards, Signal Governance',
+  subtitle: 'Stake MOONROCK to particiapte in Snapshot signaling',
+  icon: herodao_logo,
+  earnToken: 'MOONROCK',
+  stakeToken: 'MOONROCK',
   url: 'google.com',
 }
 

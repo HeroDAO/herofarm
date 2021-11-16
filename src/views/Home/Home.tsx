@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       <PageHeader
         icon={<img src={HausType} height={80} alt="farmHaus" />}
         title=""
-        subtitle="Welcome to our humble FarmHaus"
+        subtitle="Welcome to the Hero Farm. Do you have what it takes to be a Hero?"
       />
 
       <Container>
@@ -32,12 +32,15 @@ const Home: React.FC = () => {
         }}
       >
         <div style={{ width: '40%' }}>
-          <Button text="Go to Honeyswap" href="https://app.honeyswap.org" className="outline honeyswap" />
+          <Button
+            text="Go to Sushiswap"
+            href="https://app.honeyswap.org"
+            className="outline honeyswap"
+          />
         </div>
         <div style={{ width: '40%' }}>
           <Button text="Go to Farms" to="/farms" variant="default" />
         </div>
-        
       </div>
     </Page>
   )

@@ -12,7 +12,6 @@ import useReward from '../../../hooks/useReward'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 import HausIcon from '../../../assets/img/haus__icon.png'
 
-
 interface HarvestProps {
   poolContract: Contract
 }
@@ -27,14 +26,16 @@ const Harvest: React.FC<HarvestProps> = ({ poolContract }) => {
       <CardContent>
         <StyledCardContentInner>
           <StyledCardHeader>
-            <CardIcon><img src={HausIcon} height="80px" alt="" /></CardIcon>
+            <CardIcon>
+              <img src={HausIcon} height="80px" alt="" />
+            </CardIcon>
             <Value value={getBalanceNumber(earnings)} decimals={6} />
-            <Label text="HAUS Earned" />
+            <Label text="MOONROCK Earned" />
           </StyledCardHeader>
           <StyledCardActions>
             <Button
               disabled={!earnings.toNumber() || pendingTx}
-              text={pendingTx ? 'Collecting HAUS' : 'Harvest'}
+              text={pendingTx ? 'Collecting MOONROCK' : 'Harvest'}
               onClick={async () => {
                 setPendingTx(true)
                 await onReward()
