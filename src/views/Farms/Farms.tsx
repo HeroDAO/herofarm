@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import { useWallet } from 'use-wallet'
 
-import HausAvatar from '../../assets/img/haus__avatar.png'
+import HausAvatar from '../../assets/img/herodao_logo.png'
 
 import Button from '../../components/Button'
 import Page from '../../components/Page'
@@ -28,8 +28,8 @@ const Farms: React.FC = () => {
             <Route exact path={path}>
               <PageHeader
                 icon={<img src={HausAvatar} height="95" alt="" />}
-                title="Stake HAUS or LP tokens to earn HAUS."
-                subtitle="Select a haus to farm"
+                title="Stake Moon Rocks or LP tokens to earn rewards in Moon Rock."
+                subtitle="Moon Rock can be used to redeem special NFTs for the first edition of the Moon Girl comic book."
               />
               <FarmCards />
             </Route>

@@ -98,13 +98,19 @@ const Farm: React.FC = () => {
         subtitle={hardCoded.subtitle}
         title={hardCoded.name}
       />
-      { hardCoded.name === 'Shogun' && (
-      <div style={{margin: '15px auto 35px' }}>
-        <p>Get WXDAI/HAUS Pool Tokens by adding liquidity to WXDAI/HAUS pool on Honeyswap</p>
-        {/* <Button text="Get WXDAI/HAUS on Honeyswap" href="https://app.honeyswap.org/#/pool" variant="default" /> */}
-        <StyledButton text="Get WXDAI/HAUS on Honeyswap" href="https://app.honeyswap.org/#/add/0xb0c5f3100a4d9d9532a4cfd68c55f1ae8da987eb/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d" variant="default" />
-
-      </div>
+      {hardCoded.name === 'Hero' && (
+        <div style={{ margin: '15px auto 35px' }}>
+          <p>
+            Get WXDAI/HAUS Pool Tokens by adding liquidity to WXDAI/HAUS pool on
+            Honeyswap
+          </p>
+          {/* <Button text="Get WXDAI/HAUS on Honeyswap" href="https://app.honeyswap.org/#/pool" variant="default" /> */}
+          <StyledButton
+            text="Get MOONROCK/ETH on Sushiswap"
+            href="https://app.honeyswap.org/#/add/0xb0c5f3100a4d9d9532a4cfd68c55f1ae8da987eb/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d"
+            variant="default"
+          />
+        </div>
       )}
       {/* {!verified && <React.Fragment>
         <StakeDisclaimer>
@@ -227,12 +233,12 @@ const StyledCardWrapper = styled.div`
   @media (max-width: 768px) {
     width: 80%;
   }
-`;
+`
 
 const StyledButton = styled(Button)`
   width: 50%;
   margin: 0 auto;
-`;
+`
 
 // const StakeDisclaimer = styled.div`
 //   max-width: 900px;
